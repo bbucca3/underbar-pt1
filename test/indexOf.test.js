@@ -26,4 +26,9 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns the index of a value at the beginning of an string', () => {
+    const str = 'Ben';
+    expect(_.indexOf(str, 'B')).toBe(0);
+  });
+
 });

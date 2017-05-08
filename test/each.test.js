@@ -11,6 +11,16 @@ describe('each()', () => {
     expect(count).toBe(3);
   });
 
+  it('iterates every char of a string, passing that char, its corresponding index, and the entire string (array) to the callback', () => {
+    const name = 'Ben';
+    let count = 0;
+    _.each(name, function(element, index, array) {
+      expect(element).toEqual(array[index]);
+      count += 1;
+    });
+    expect(count).toBe(3);
+  });
+
   it('iterates every element of an array-like object, passing that element, its corresponding index, and the entire array to the callback', () => {
     const arrayLikeObj = {
       length: 3,

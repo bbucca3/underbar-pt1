@@ -11,4 +11,15 @@ describe('some()', () => {
     expect(_.some(nums, num => num % 2 === 1)).toBe(false);
   });
 
+  it('returns true if any number is 0', () => {
+    const nums = [0, 2, 4, 5, 6];
+    expect(_.some(nums, num => num === 0)).toBe(true);
+  });
+
+  it('return false if no number equals 0', () => {
+    const nums = [2, 4, 5, 6];
+    expect(_.some(nums, num => num === 0)).toBe(false);
+  });
+  
+
 });

@@ -23,4 +23,10 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters a string to a specific char', () => {
+    const str = "Hello Ben";
+    expect(_.filter(str, char => char === 'e')).toEqual(['e', 'e']);
+  });
+
 });

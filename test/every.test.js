@@ -17,5 +17,10 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns true if all numbers in an array are tested to have numerical value', () => {
+      const nums = [1, 3, 5, 7];
+      expect(_.every(nums, num => num !== NaN)).toBe(true);
+    });
+
   });
 });
